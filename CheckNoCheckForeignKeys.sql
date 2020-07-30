@@ -16,8 +16,9 @@ INNER JOIN sys.columns c
 INNER JOIN sys.objects o
 	ON fk.constraint_object_id = o.object_id
 WHERE 
-fk.referenced_object_id = (	SELECT object_id 
-                            FROM sys.tables 
-                            WHERE name = 'GroupDim')
+--fk.referenced_object_id = (	SELECT object_id 
+--                            FROM sys.tables 
+--                            WHERE name = 'NetworkSetDim')
+t.name = 'PlanTimelineDim'
 ORDER BY
 s.name,t.name,o.name
