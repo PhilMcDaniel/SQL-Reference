@@ -4,9 +4,9 @@
 -- Description:	Searches through all databases to find object dependencies
 -- Example: EXEC [AuditDatabase].[usp_FindDepenencies] @object = 'Datedim', @type = 'all'
 -- =============================================
-CREATE PROCEDURE [AuditDatabase].[usp_FindDepenencies]
-@object VARCHAR(100),@type VARCHAR(20)
-AS
+--CREATE PROCEDURE [AuditDatabase].[usp_FindDepenencies]
+--@object VARCHAR(100),@type VARCHAR(20)
+--AS
 BEGIN
 
 SET NOCOUNT ON;
