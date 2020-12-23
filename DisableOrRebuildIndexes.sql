@@ -1,36 +1,4 @@
-USE [BIAnalytics]
-GO
 
-
-/****** Object:  StoredProcedure [Main].[AddClaimLinesDimForeignKeys]    Script Date: 2/14/2020 2:12:57 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-
-CREATE PROCEDURE [Main].[DisableOrRebuildIndexes]
-@sch varchar(500),
-@tbl Varchar(500),
-@type varchar(20)
-
-AS
-
-
-/****************************************************************************************
-*	Procedure Name:		Main.DisableOrRebuildIndexes
-*	Created by:			Phil McDaniel
-*	Created on:			02/14/2020
-*	Description:		Dynamically disable all nonclustered indexes on table, or dynamically rebuild all indexes on a table
-*	usage example 1:	EXEC [Main].[DisableOrRebuildIndexes] @sch = 'dbo',@tbl = 'ClaimsDim', @type = 'DISABLE'
-*	usage example 2:	EXEC [Main].[DisableOrRebuildIndexes] @sch = 'dbo',@tbl = 'ClaimsDim', @type = 'REBUILD'
-*
-*	Change History
-*	Modified Date	Modified By	 Description of change
-*	=============	===========	 =========================================================
-*
-******************************************************************************************/
 BEGIN
 	SET NOCOUNT ON;
 
