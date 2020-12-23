@@ -1,15 +1,4 @@
-USE [master]
-GO
-
-/****** Object:  StoredProcedure [dbo].[Unit_Testing_For_Stored_Proc_Phil]    Script Date: 5/15/2020 1:43:50 PM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-
-ALTER PROCEDURE [dbo].[Unit_Testing_For_Stored_Proc_Phil]
+CREATE PROCEDURE [dbo].[Unit_Testing_For_Stored_Proc_Phil]
 
 @DB1 NVARCHAR(25),
 @DB2 NVARCHAR(25),
@@ -25,13 +14,10 @@ BEGIN
 
 
 /****************************************************************************************
-*		  Procedure Name: [dbo].[Unit_Testing_For_Stored_Proc]
-*			  Created by:	Ghislain Ndike
-*			  Created on: 05-03-2020
-*		     Description:	Unit Testing For Stored Procs
-*	  How to Run W Param:	EXEC master.[dbo].[Unit_Testing_For_Stored_Proc_Phil]
+*	      Procedure Name: [dbo].[Unit_Testing_For_Stored_Proc]
+*	  How to Run W Param: EXEC master.[dbo].[Unit_Testing_For_Stored_Proc_Phil]
 							@DB1 = 'BIAnalytics'	,@DB2 = 'BIAnalytics'
-							,@schema1 = 'main'		,@schema2 = 'main'
+							,@schema1 = 'main'	,@schema2 = 'main'
 							,@table1 = 'datedim'	,@table2 = 'datedim_Phil'
 							,@procedurename = 'fakestoredprocname'
 *	
