@@ -1,0 +1,4 @@
+SELECT TOP 10 PERCENT 
+DateId 
+FROM main.DateDim 
+ORDER BY NEWID()
